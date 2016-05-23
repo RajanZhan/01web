@@ -28,8 +28,10 @@ class PublicController extends CommonController
     {
         $admin_model = new AdminModel();
         $data = I('post.');
+        //echo 'login';return;
         if(!empty($data))
         {
+
             if(!$admin_model->checkPwd($data['username'],$data['userpass']))
             {
                 redirect(U('/Admin/Public/login'));
@@ -41,7 +43,6 @@ class PublicController extends CommonController
             //var_dump($data);
             return;
         }
-
         $this->display();
     }
 

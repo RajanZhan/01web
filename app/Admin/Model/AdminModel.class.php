@@ -16,7 +16,7 @@ class AdminModel extends  Model
     {
         if(!$_SESSION['admin'])
         {
-            redirect(U('/Admin/Public/login'));
+            return false;//redirect(U('/Admin/Public/login'));
         }
         else
         {

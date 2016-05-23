@@ -18,7 +18,6 @@ class BaseController  extends CommonController
         //检测后台的登录情况
         $admin_model = new AdminModel();
         $admin_model->checkLogin();
-
     }
 
     public function index()
