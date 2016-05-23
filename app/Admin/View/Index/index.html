@@ -1,0 +1,167 @@
+<!--
+/*
+ * ========================================================================
+ * Copyright(c) 01研习社,, All Rights Reserved.
+ * ========================================================================
+ *  
+ * 【当前类文件的功能】
+ *  
+ *  
+ * 作者：小占(rajan)  时间：$
+ * 文件名：$
+ * 版本：V1.0.0
+ * 邮箱:rajan.zhan@foxmail.com
+ * 修改者：           时间：               
+ * 修改说明：
+ * ========================================================================
+*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台中心</title>
+    <!--引入主题-->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/easyui/themes/black/easyui.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/easyui/themes/icon.css">
+    <!--引入框架-->
+    <script src="__PUBLIC__/easyui/jquery.min.js"></script>
+    <script src="__PUBLIC__/easyui/jquery.easyui.min.js"></script>
+
+    <!--easyui css 二次开发使用-->
+   <!-- <link rel="stylesheet" type="text/css" href="__PUBLIC__/style/css/easyui_css_change.css">-->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<style>
+    body, html {
+        /*background: url("./style/img/bg5.jpg") no-repeat;
+        background-size: cover;   */
+        height: 90%;
+       /* width: 100%;*/
+
+    }
+
+    #main_conten {
+        /* margin-top: 30%;*/
+        margin: 0px auto;
+        width: 1000px;
+    }
+    .layout-body .accordion
+    {
+        border: none !important;
+    }
+    .btn-item
+    {
+        margin-top: 4px;
+    }
+   
+</style>
+
+<body>
+
+
+
+
+<div style="margin: 5% auto;width: 1100px;">
+    <div id="main_panel">
+        <div id="main_panel_handle">
+            <div id="main_conten" class="easyui-layout" style="width:1000px;height:600px;">
+                <div data-options="region:'west',title:'功能导航',split:true" style="width:204px;">
+
+                    <div id="aa" class="easyui-accordion" style="width:195px;height:200px;"><!--height:570px;-->
+                        <div title="系统设置" data-options="iconCls:'icon-save',selected:false" style="overflow:auto;padding:10px;">
+                            <a id="qq_set" href="#" class="easyui-linkbutton btn-item" data-options="width:170,iconCls:'icon-edit'">提问QQ设置</a>
+                            <a id="btn2" href="#" class="easyui-linkbutton btn-item" data-options="width:170">前端账号设置</a>
+                            <a id="btn3" href="#" class="easyui-linkbutton btn-item" data-options="width:170">前端账号设置</a>
+
+                        </div>
+                        <div title="内容管理" data-options="iconCls:'icon-large-shapes',selected:true" style="padding:10px;">
+                            <a id="btn4" href="#" class="easyui-linkbutton btn-item" data-options="width:170">内容管理</a>
+                            <a id="btn5" href="#" class="easyui-linkbutton btn-item" data-options="width:170">等级管理</a>
+                            <!--<a id="btn3" href="#" class="easyui-linkbutton btn-item" data-options="width:170">前端账号设置</a>-->
+                        </div>
+                        <div title="用户管理" data-options="iconCls:'icon-man',selected:false" style="padding:10px;">
+                            <a id="btn6" href="#" class="easyui-linkbutton btn-item" data-options="width:170">用户列表</a>
+                            <a id="btn7" href="#" class="easyui-linkbutton btn-item" data-options="width:170">数据监控</a>
+                            <a id="btn8" href="#" class="easyui-linkbutton btn-item" data-options="width:170">统计记录</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div data-options="region:'center',title:'内容区'" style="padding:5px;background:rgb(102, 102, 102);;">
+
+                    <div id="content_tab" class="easyui-tabs" style="width:785px;height:553px;">
+                        <div title="系统主页">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+
+
+<script>
+
+    //主内容区 添加tab 的函数
+    (function () {
+        $.fn.addTab = function (title,url) {
+            var _this = $(this);
+            var content = '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>';
+            if(_this.tabs('exists',title))
+            {
+                _this.tabs('select',title)
+            }
+            else {
+                _this.tabs('add', {
+                    title: title,
+                    content: content,
+                    closable: true
+                })
+            }
+        }
+    })();
+
+    $(function () {
+
+        $("#main_panel_handle").panel({
+            width: 1005,//800,
+            height: 630,//700,
+            collapsible:true,
+            minimizable:true,
+            closable:true,
+            title: '主面板',
+
+            // 关闭触发的事件
+            onClose: function () {
+                // 将html的内容置为空
+                $(this).html('');
+
+            }
+
+        })
+
+        $("#main_panel").draggable({
+            handle: ".panel-header",
+            onDrag: function (e) {
+                //onDrag(e);
+                //console.log(e);
+            }
+        })
+
+        $("#qq_set").click(function () {
+            var title = $(this).html();
+            $("#content_tab").addTab(title,'http://www.baidu.com')
+
+        })
+
+
+    })
+</script>
+
+
+
+
+</body>
+</html>

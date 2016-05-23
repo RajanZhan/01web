@@ -1,0 +1,181 @@
+<!--
+/*
+ * ========================================================================
+ * Copyright(c) 01研习社,, All Rights Reserved.
+ * ========================================================================
+ *  
+ * 【当前类文件的功能】
+ *  
+ *  
+ * 作者：小占(rajan)  时间：$
+ * 文件名：$
+ * 版本：V1.0.0
+ * 邮箱:rajan.zhan@foxmail.com
+ * 修改者：           时间：               
+ * 修改说明：
+ * ========================================================================
+*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01研习社</title>
+    <link href="__PUBLIC__/style/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="__PUBLIC__/style/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<style>
+    body, html {
+        /*background: url("./style/img/bg5.jpg") no-repeat;
+        background-size: cover;   */
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .wai {
+        width: 100%;
+        height: 100%;
+        background: url('__PUBLIC__/style/img/bg3.jpg') no-repeat;
+        background-size: cover;
+        position: fixed;
+    }
+
+    .main {
+        /* margin-top: 30%;*/
+        margin: 1% auto;
+        width: 80%;
+        height: 35em;
+
+    }
+</style>
+
+<body>
+
+<!--<div style="position: fixed;left: 80%;bottom: 10%;width: 300px;height:200px;z-index: 99;">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                消息盒子
+                <a class="btn btn-xs btn-info" style="float: right;">关闭</a>
+            </h3>
+        </div>
+        <div class="panel-body" style="overflow-y: auto;">
+            <ul class="list-group" style="height: 180px;">
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+                <li class="list-group-item">有新订单，请查看</li>
+            </ul>
+        </div>
+    </div>
+</div>-->
+
+<div class="wai" style="">
+    <div style="color: white;margin-top: 4%;">
+        <div class="container"><h1>01研习社</h1>
+            <p>一对一指导学习，全天在线指导</p>
+
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                           今年什么技术最热门?
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                       <h3>2016最热门的IT技术是什么？</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            我该学习什么？
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <h3>繁多的课程我该如何取舍？</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            从何处开始学习？
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <h3>繁多的课程我该如何开始？</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            谁来一对一辅导我？
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <h3>没有人一对一辅导我怎么办？</h3>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <style>
+            .mybtn
+            {
+                border-radius: 1em;
+                width: 20em;margin-top: 2em;
+            }
+        </style>
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12" style="text-align: center;color: whitesmoke;">
+                <h1>01研习社提供全套 学习/指导 支持</h1>
+                <div id="start_learn" class="btn btn-success mybtn btn-lg ">开始学习</div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#start_learn").click(function () {
+                $(this).html("正在跳转...");
+                setTimeout(function () {
+                    location.href = "{:u('/Home/Index/learnCenter')}";
+                })
+            })
+        })
+    </script>
+
+</div>
+</body>
+</html>

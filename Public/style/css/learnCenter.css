@@ -1,0 +1,125 @@
+
+li{
+    list-style: none;
+}
+#main
+{
+    position: absolute;
+    margin-top: 10em;
+    margin-left: 3em;
+}
+.main_panel_left
+{
+    width: 35%;
+    height: 100%;
+    /* background: red;*/
+}
+.main_panel_left li{
+    margin: 8px;
+    font-size: 13px;
+    border: 1px solid darkslategrey;
+    border-radius: .8em;
+    padding: 5px;
+    color: #bbbbbb;
+    cursor: pointer;
+}
+.main_panel_left li:hover
+{
+    border-color: gainsboro;
+}
+.main_panel_right
+{
+    width: 65%;
+    height: 100%;
+
+}
+
+.main_panel_right li
+{
+    margin: 10px;
+    height: 2em;
+    padding-top: 1em;
+    padding-left: 10px;
+    border: 1px solid white;
+    font-size: 16px;
+    border-radius: .7em;
+    cursor: pointer;
+}
+.main_panel_right li:hover
+{
+    border-color: #948d72;
+}
+
+
+.main_panel_left ,.main_panel_right
+{
+    float: left;
+    overflow-y: auto;
+}
+
+
+/*随时提问组件 css start*/
+
+.chat_to_me
+{
+    width: 200px;
+    height: 100px;
+    background: #3da2ff;
+    position: absolute;
+    left: 3em;
+    top: 2em;
+    cursor: pointer;
+}
+
+.chat_to_me_icon
+{
+    width: 35%;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.chat_to_me_title
+{
+    font-size: 24px;
+    margin-bottom: 10%;
+    width: 44%;
+}
+
+
+/*****随时提问组件 css end*/
+
+
+/*播放器组件 css*/
+#video_main
+{
+    position: absolute;
+    right: 100px;
+    top: 56px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
